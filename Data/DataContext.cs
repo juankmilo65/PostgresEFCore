@@ -14,36 +14,84 @@ namespace PostgresEFCore.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            var code = new
-            {
-                Id = 1,
-                Description = "Description 1",
-                Name = "Name 2"
-                //OwnerId = 1,
-            };
-
-            var enterprise = new 
-            {
-                CodeId =1,
-                Id = 1,
-                GIn = 9223372036854775807,
-                Name = "Name 1",
-                Nit = 9223372036854775807
-                // OwnerId = 1
-            };
 
             modelBuilder.Entity<Code>(entity =>
             {
                 entity.Property(e => e.Id).IsRequired();
             });
 
-            // modelBuilder.Entity<Enterprise>().HasData(enterprise);
-            //modelBuilder.Entity<Code>().HasData(code)//.HasKey(x=> new {  OwnerId = x.Id  }).HasName("Id");
-
-            modelBuilder.Entity<Code>(b=> {
-                b.HasData(code);
-                b.OwnsOne(e => e.Owner).HasData(enterprise);
+            modelBuilder.Entity<Code>(b =>
+            {
+                b.HasData(new
+                {
+                    Id = 1,
+                    Description = "Description 1",
+                    Name = "Code 1"
+                });
+                b.OwnsOne(e => e.Owner).HasData(new
+                {
+                    CodeId = 1,
+                    Id = 1,
+                    GIn = 9223372036854775805,
+                    Name = "Owner 1",
+                    Nit = 9223372036854775804
+                });
             });
+
+            modelBuilder.Entity<Code>(b =>
+            {
+                b.HasData(new
+                {
+                    Id = 2,
+                    Description = "Description 2",
+                    Name = "Code 2"
+                });
+                b.OwnsOne(e => e.Owner).HasData(new
+                {
+                    CodeId = 2,
+                    Id = 2,
+                    GIn = 9223372036854775806,
+                    Name = "Owner 2",
+                    Nit = 9223372036854775803
+                });
+            });
+
+            modelBuilder.Entity<Code>(b =>
+            {
+                b.HasData(new
+                {
+                    Id = 3,
+                    Description = "Description 3",
+                    Name = "Code 3"
+                });
+                b.OwnsOne(e => e.Owner).HasData(new
+                {
+                    CodeId = 3,
+                    Id = 3,
+                    GIn = 9223372036854775802,
+                    Name = "Owner 3",
+                    Nit = 9223372036854775801
+                });
+            });
+
+            modelBuilder.Entity<Code>(b =>
+            {
+                b.HasData(new
+                {
+                    Id = 4,
+                    Description = "Description 4",
+                    Name = "Code 4"
+                });
+                b.OwnsOne(e => e.Owner).HasData(new
+                {
+                    CodeId = 4,
+                    Id = 1,
+                    GIn = 9223372036854775805,
+                    Name = "Owner 1",
+                    Nit = 9223372036854775804
+                });
+            });
+
         }
     }
 }

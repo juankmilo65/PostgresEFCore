@@ -5,6 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PostgresEFCore.Data;
 using Microsoft.EntityFrameworkCore;
+using PostgresEFCore.Services;
+using PostgresEFCore.Interfaces;
 
 namespace PostgresEFCore
 {
@@ -22,6 +24,8 @@ namespace PostgresEFCore
         {
             services.AddControllers();
             services.AddDbContext<DataContext>(p => p.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<ICodeService, CodeService>();
+            services.AddScoped<IEnterpriseService, EnterpriseService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

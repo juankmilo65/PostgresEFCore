@@ -41,7 +41,25 @@ namespace PostgresEFCore.Migrations
                         {
                             Id = 1,
                             Description = "Description 1",
-                            Name = "Name 2"
+                            Name = "Code 1"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Description 2",
+                            Name = "Code 2"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "Description 3",
+                            Name = "Code 3"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Description = "Description 4",
+                            Name = "Code 4"
                         });
                 });
 
@@ -76,10 +94,34 @@ namespace PostgresEFCore.Migrations
                                 new
                                 {
                                     CodeId = 1,
-                                    GIn = 9223372036854775807L,
+                                    GIn = 9223372036854775805L,
                                     Id = 1,
-                                    Name = "Name 1",
-                                    Nit = 9223372036854775807L
+                                    Name = "Owner 1",
+                                    Nit = 9223372036854775804L
+                                },
+                                new
+                                {
+                                    CodeId = 2,
+                                    GIn = 9223372036854775806L,
+                                    Id = 2,
+                                    Name = "Owner 2",
+                                    Nit = 9223372036854775803L
+                                },
+                                new
+                                {
+                                    CodeId = 3,
+                                    GIn = 9223372036854775802L,
+                                    Id = 3,
+                                    Name = "Owner 3",
+                                    Nit = 9223372036854775801L
+                                },
+                                new
+                                {
+                                    CodeId = 4,
+                                    GIn = 9223372036854775805L,
+                                    Id = 1,
+                                    Name = "Owner 1",
+                                    Nit = 9223372036854775804L
                                 });
                         });
                 });

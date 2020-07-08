@@ -45,12 +45,24 @@ namespace PostgresEFCore.Migrations
             migrationBuilder.InsertData(
                 table: "Codes",
                 columns: new[] { "Id", "Description", "Name" },
-                values: new object[] { 1, "Description 1", "Name 2" });
+                values: new object[,]
+                {
+                    { 1, "Description 1", "Code 1" },
+                    { 2, "Description 2", "Code 2" },
+                    { 3, "Description 3", "Code 3" },
+                    { 4, "Description 4", "Code 4" }
+                });
 
             migrationBuilder.InsertData(
                 table: "Enterprises",
                 columns: new[] { "CodeId", "GIn", "Id", "Name", "Nit" },
-                values: new object[] { 1, 9223372036854775807L, 1, "Name 1", 9223372036854775807L });
+                values: new object[,]
+                {
+                    { 1, 9223372036854775805L, 1, "Owner 1", 9223372036854775804L },
+                    { 2, 9223372036854775806L, 2, "Owner 2", 9223372036854775803L },
+                    { 3, 9223372036854775802L, 3, "Owner 3", 9223372036854775801L },
+                    { 4, 9223372036854775805L, 1, "Owner 1", 9223372036854775804L }
+                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
