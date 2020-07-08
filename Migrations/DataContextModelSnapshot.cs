@@ -94,10 +94,10 @@ namespace PostgresEFCore.Migrations
                                 new
                                 {
                                     CodeId = 1,
-                                    GIn = 9223372036854775805L,
+                                    GIn = 9223372036854775804L,
                                     Id = 1,
                                     Name = "Owner 1",
-                                    Nit = 9223372036854775804L
+                                    Nit = 9223372036854775803L
                                 },
                                 new
                                 {
@@ -105,7 +105,7 @@ namespace PostgresEFCore.Migrations
                                     GIn = 9223372036854775806L,
                                     Id = 2,
                                     Name = "Owner 2",
-                                    Nit = 9223372036854775803L
+                                    Nit = 9223372036854775802L
                                 },
                                 new
                                 {

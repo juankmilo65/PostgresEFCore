@@ -1,12 +1,13 @@
-﻿using PostgresEFCore.Models;
+﻿using PostgresEFCore.Dto;
+using PostgresEFCore.Models;
 using System.Collections.Generic;
 
 namespace PostgresEFCore.Interfaces
 {
     public interface IEnterpriseService
     {
-        public List<Enterprise> GetEnterprises();
-        public Enterprise GetEnterpriseByNitAndAsociatedCodes(long nit, List<int> idsCode);
+        public List<EnterpriseDto> GetEnterprises();
+        public EnterpriseDto GetEnterpriseByNit(long nit);
         public Enterprise GetEnterpriseByIdCode(int idCode);
     }
 }

@@ -32,9 +32,9 @@ namespace PostgresEFCore.Data
                 {
                     CodeId = 1,
                     Id = 1,
-                    GIn = 9223372036854775805,
+                    GIn = 9223372036854775804,
                     Name = "Owner 1",
-                    Nit = 9223372036854775804
+                    Nit = 9223372036854775803
                 });
             });
 
@@ -52,7 +52,7 @@ namespace PostgresEFCore.Data
                     Id = 2,
                     GIn = 9223372036854775806,
                     Name = "Owner 2",
-                    Nit = 9223372036854775803
+                    Nit = 9223372036854775802
                 });
             });
 
@@ -86,9 +86,9 @@ namespace PostgresEFCore.Data
                 {
                     CodeId = 4,
                     Id = 1,
-                    GIn = 9223372036854775805,
+                    GIn = 9223372036854775804,
                     Name = "Owner 1",
-                    Nit = 9223372036854775804
+                    Nit = 9223372036854775803
                 });
             });
 

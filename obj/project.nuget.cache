@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "MEgtux5KNFcKl6g5qKfmEubqvYjAl0VPfJkZnWVUBRGd1BORZ32cFqqH4NJbq0sf2TdE3FPj42WVyFGC9jPvMg==",
+  "dgSpecHash": "a837NjAHYTT9DexbDfFQvIzmS0bCXsc8TMMfPyoaxzhyy11mAYlIJX+iqLb4NyCupcopAnwWTLROFvUUmRQw/g==",
   "success": true,
   "projectFilePath": "D:\\Trabajo\\PostgresEFCore\\PostgresEFCore.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\JuanKmilo65\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\JuanKmilo65\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\JuanKmilo65\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\JuanKmilo65\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -28,6 +29,7 @@
     "C:\\Users\\JuanKmilo65\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
     "C:\\Users\\JuanKmilo65\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\JuanKmilo65\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "C:\\Users\\JuanKmilo65\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\JuanKmilo65\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
   ],
   "logs": []

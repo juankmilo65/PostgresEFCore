@@ -30,8 +30,6 @@ D:\Trabajo\PostgresEFCore\bin\Debug\netcoreapp3.1\System.Collections.Immutable.d
 D:\Trabajo\PostgresEFCore\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 D:\Trabajo\PostgresEFCore\obj\Debug\netcoreapp3.1\PostgresEFCore.AssemblyInfoInputs.cache
 D:\Trabajo\PostgresEFCore\obj\Debug\netcoreapp3.1\PostgresEFCore.AssemblyInfo.cs
-D:\Trabajo\PostgresEFCore\obj\Debug\netcoreapp3.1\PostgresEFCore.csproj.CoreCompileInputs.cache
-D:\Trabajo\PostgresEFCore\obj\Debug\netcoreapp3.1\PostgresEFCore.MvcApplicationPartsAssemblyInfo.cache
 D:\Trabajo\PostgresEFCore\obj\Debug\netcoreapp3.1\PostgresEFCore.RazorTargetAssemblyInfo.cache
 D:\Trabajo\PostgresEFCore\obj\Debug\netcoreapp3.1\PostgresEFCore.csproj.CopyComplete
 D:\Trabajo\PostgresEFCore\obj\Debug\netcoreapp3.1\staticwebassets\PostgresEFCore.StaticWebAssets.Manifest.cache
@@ -40,3 +38,6 @@ D:\Trabajo\PostgresEFCore\obj\Debug\netcoreapp3.1\PostgresEFCore.dll
 D:\Trabajo\PostgresEFCore\obj\Debug\netcoreapp3.1\PostgresEFCore.pdb
 D:\Trabajo\PostgresEFCore\obj\Debug\netcoreapp3.1\PostgresEFCore.genruntimeconfig.cache
 D:\Trabajo\PostgresEFCore\obj\Debug\netcoreapp3.1\PostgresEFCore.csprojAssemblyReference.cache
+D:\Trabajo\PostgresEFCore\obj\Debug\netcoreapp3.1\PostgresEFCore.csproj.CoreCompileInputs.cache
+D:\Trabajo\PostgresEFCore\obj\Debug\netcoreapp3.1\PostgresEFCore.MvcApplicationPartsAssemblyInfo.cache
+D:\Trabajo\PostgresEFCore\bin\Debug\netcoreapp3.1\AutoMapper.dll
