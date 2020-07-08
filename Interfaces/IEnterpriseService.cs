@@ -1,6 +1,7 @@
 ﻿using PostgresEFCore.Dto;
 using PostgresEFCore.Models;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace PostgresEFCore.Interfaces
 {
@@ -8,6 +9,7 @@ namespace PostgresEFCore.Interfaces
     {
         public List<EnterpriseDto> GetEnterprises();
         public EnterpriseDto GetEnterpriseByNit(long nit);
-        public Enterprise GetEnterpriseByIdCode(int idCode);
+        public EnterpriseDto GetEnterpriseByIdCode(int idCode);
+        public Task<string> UpdateEnterprise(Enterprise enterprise);
     }
 }

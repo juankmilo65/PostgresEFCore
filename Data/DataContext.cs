@@ -15,10 +15,12 @@ namespace PostgresEFCore.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
-            modelBuilder.Entity<Code>(entity =>
-            {
-                entity.Property(e => e.Id).IsRequired();
-            });
+            //modelBuilder.Entity<Code>(entity =>
+            //{
+            //    entity.Property(e => e.Id).IsRequired();
+            //});
+
+            
 
             modelBuilder.Entity<Code>(b =>
             {

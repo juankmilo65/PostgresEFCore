@@ -18,28 +18,71 @@ namespace PostgresEFCore.Services
             _context = contex;
         }
 
-        public Enterprise GetEnterpriseByIdCode(int idCode)
+        public async Task<string> UpdateEnterprise(Enterprise enterprise)
         {
-            throw new NotImplementedException();
+
+            var enter = _context.Codes.Where(o => o.Owner.Id.Equals(enterprise.Id));
+
+            foreach (var item in enter)
+            {
+                item.Owner.Name = enterprise.Name;
+                item.Owner.Nit = enterprise.Nit;
+                item.Owner.GIn = enterprise.GIn;
+
+                _context.Enterprises.Update(item.Owner);
+            }
+
+            try
+            {
+                await _context.SaveChangesAsync();
+                return "Updated";
+            }
+            catch (Exception ex)
+            {
+
+                if (GetEnterprisesBase(null, null, enterprise.Id) == null)
+                {
+                    return "Not Found";
+                }
+                else
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+
+
+        }
+
+        public EnterpriseDto GetEnterpriseByIdCode(int idCode)
+        {
+            return GetEnterprisesBase(null, idCode, null).First();
         }
 
         public EnterpriseDto GetEnterpriseByNit(long nit)
         {
-            return GetEnterprisesBase(nit).First();
+            return GetEnterprisesBase(nit, null, null).First();
         }
 
         public List<EnterpriseDto> GetEnterprises()
         {
-            return GetEnterprisesBase(null);
+            return GetEnterprisesBase(null, null, null);
         }
 
 
-        private List<EnterpriseDto> GetEnterprisesBase(long? nit)
+        private List<EnterpriseDto> GetEnterprisesBase(long? nit, int? idCod, int? idEnterprise)
         {
             List<EnterpriseDto> enterprisesDto = new List<EnterpriseDto>();
             List<EnterpriseDto> enterprisesDtoAux = new List<EnterpriseDto>();
             EnterpriseDto enterpriseDto = new EnterpriseDto();
-            var codes = nit == null ? _context.Codes : _context.Codes.Where(o => o.Owner.Nit.Equals(nit));
+            var codes = nit == null && idCod == null && idEnterprise == null ? _context.Codes :
+                nit != null && idCod == null && idEnterprise == null ? _context.Codes.Where(o => o.Owner.Nit.Equals(nit)) :
+                nit == null && idCod == null && idEnterprise != null ? _context.Codes.Where(o => o.Owner.Id.Equals(idEnterprise)) :
+                _context.Codes.Where(o => o.Id.Equals(idCod));
+
+
+            //nit == null && idCod == null ? _context.Codes :
+            //    nit != null && idCod == null ? _context.Codes.Where(o => o.Owner.Nit.Equals(nit)) :
+            //    _context.Codes.Where(o => o.Id.Equals(idCod));
 
             foreach (var item in codes)
             {
@@ -48,12 +91,17 @@ namespace PostgresEFCore.Services
                 enterpriseDto.Nit = item.Owner.Nit;
                 enterpriseDto.GIn = item.Owner.GIn;
                 enterpriseDto.CodeList = new List<CodeDto>();
-                enterpriseDto.CodeList.Add(new CodeDto
+
+                if ((nit != null && idCod == null) || idEnterprise != null)
                 {
-                    Id = item.Id,
-                    Name = item.Name,
-                    Description = item.Description
-                });
+                    enterpriseDto.CodeList.Add(new CodeDto
+                    {
+                        Id = item.Id,
+                        Name = item.Name,
+                        Description = item.Description
+                    });
+                }
+
 
                 if (!enterprisesDto.Contains(enterpriseDto))
                 {
@@ -65,7 +113,7 @@ namespace PostgresEFCore.Services
 
             foreach (var ente in enterprisesDto)
             {
-                if (enterprisesDtoAux.Count > 0)
+                if (enterprisesDtoAux.Count > 0 && (nit != null && idCod == null) || idEnterprise != null)
                 {
                     bool aux = enterprisesDtoAux.Select(o => o.Id.Equals(ente.Id)).First();
                     if (aux)
